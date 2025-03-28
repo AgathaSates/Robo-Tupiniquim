@@ -10,6 +10,5 @@ class Area
         string[] limites = Console.ReadLine().Split(' ');
         LimiteX = int.Parse(limites[0]);
         LimiteY = int.Parse(limites[1]);
-    }
-   
+    } 
 }

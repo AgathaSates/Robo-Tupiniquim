@@ -1,47 +1,47 @@
 ﻿namespace Robo_Tupiniquim.ConsoleApp.Entidades;
 
 class MovimentosRobo
-{
-    public static void ComandosRobo(string comandos)
+{ 
+    public static void ComandosRobo(string comandos, char direcao, int x, int y)
     {
         foreach (char comando in comandos)
         {
             switch (comando)
             {
-                case 'M': Avançar(); break;
+                case 'M': Avançar(direcao, ref x, ref y); break;
 
-                case 'E': Robo.direcao = VirarParaEsquerda(); break;
+                case 'E': direcao = VirarParaEsquerda(direcao); break;
 
-                case 'D': Robo.direcao = VirarParaDireita(); break;
+                case 'D': direcao = VirarParaDireita(direcao); break;
 
             }
         }
-        Console.WriteLine($"{Robo.x} {Robo.y} {Robo.direcao}");
+        Console.WriteLine($"A posição final é: {x} {y} {direcao}");
     }
 
-    public static void Avançar()
+    public static void Avançar(char direcao, ref int x, ref int y)
     {
-        switch (Robo.direcao)
+        switch (direcao)
         {
-            case 'N': Robo.y++; break;
+            case 'N': y++; break;
 
-            case 'S': Robo.y--; break;
+            case 'S': y--; break;
 
-            case 'L': Robo.x++; break;
+            case 'L': x++; break;
 
-            case 'O': Robo.x--; break;
+            case 'O': x--; break;
 
         }
 
-        if (Robo.x < 0 || Robo.x > Area.LimiteX || Robo.y < 0 || Robo.y > Area.LimiteY)
+        if (x < 0 || x > Area.LimiteX || y < 0 || y > Area.LimiteY)
         {
             Console.WriteLine("O Robô saiu dos limites do mapa.");
         }
     }
 
-    public static char VirarParaEsquerda()
+    public static char VirarParaEsquerda(char direcao)
     {
-        switch (Robo.direcao)
+        switch (direcao)
         {
             case 'N': return 'O';
 
@@ -51,13 +51,13 @@ class MovimentosRobo
 
             case 'O': return 'S';
 
-            default: return Robo.direcao;
+            default: return direcao;
         }
     }
 
-    public static char VirarParaDireita()
+    public static char VirarParaDireita(char direcao)
     {
-        switch (Robo.direcao)
+        switch (direcao)
         {
             case 'N': return 'L';
 
@@ -67,7 +67,7 @@ class MovimentosRobo
 
             case 'O': return 'N';
 
-            default: return Robo.direcao;
+            default: return direcao;
         }
     }
 }
