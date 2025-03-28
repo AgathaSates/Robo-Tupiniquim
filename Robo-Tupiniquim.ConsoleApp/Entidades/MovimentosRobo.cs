@@ -1,8 +1,10 @@
-﻿namespace Robo_Tupiniquim.ConsoleApp.Entidades;
+﻿using Robo_Tupiniquim.ConsoleApp.Entidades.Utilitários;
+
+namespace Robo_Tupiniquim.ConsoleApp.Entidades;
 
 class MovimentosRobo
-{ 
-    public static void ComandosRobo(string comandos, char direcao, int x, int y)
+{
+    public static void MoverRobo(string nomerobo, string comandos, char direcao, int x, int y)
     {
         foreach (char comando in comandos)
         {
@@ -16,7 +18,15 @@ class MovimentosRobo
 
             }
         }
-        Console.WriteLine($"A posição final é: {x} {y} {direcao}");
+
+        if (x < 0 || x > Area.LimiteX || y < 0 || y > Area.LimiteY)
+        {
+            EscrevaSobreaMissao.UltrapassouArea(nomerobo);
+        }
+        else 
+        {
+            EscrevaSobreaMissao.PosicaoFinalRobo(nomerobo, x, y, direcao);
+        }
     }
 
     public static void Avançar(char direcao, ref int x, ref int y)
@@ -33,10 +43,6 @@ class MovimentosRobo
 
         }
 
-        if (x < 0 || x > Area.LimiteX || y < 0 || y > Area.LimiteY)
-        {
-            Console.WriteLine("O Robô saiu dos limites do mapa.");
-        }
     }
 
     public static char VirarParaEsquerda(char direcao)
