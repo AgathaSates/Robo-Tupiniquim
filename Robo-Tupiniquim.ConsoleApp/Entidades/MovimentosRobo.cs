@@ -1,4 +1,4 @@
-﻿using Robo_Tupiniquim.ConsoleApp.Entidades.Utilitários;
+﻿using Robo_Tupiniquim.ConsoleApp.Utilitários;
 
 namespace Robo_Tupiniquim.ConsoleApp.Entidades;
 
@@ -21,11 +21,11 @@ class MovimentosRobo
 
         if (x < 0 || x > Area.LimiteX || y < 0 || y > Area.LimiteY)
         {
-            EscrevaSobreaMissao.UltrapassouArea(nomerobo);
+            EscrevaExploracao.UltrapassouArea(nomerobo);
         }
         else 
         {
-            EscrevaSobreaMissao.PosicaoFinalRobo(nomerobo, x, y, direcao);
+            EscrevaExploracao.PosicaoFinalRobo(nomerobo, x, y, direcao);
         }
     }
 
@@ -57,7 +57,7 @@ class MovimentosRobo
 
             case 'O': return 'S';
 
-            default: return direcao;
+            default: return '?';
         }
     }
 
@@ -73,7 +73,7 @@ class MovimentosRobo
 
             case 'O': return 'N';
 
-            default: return direcao;
+            default: return '?';
         }
     }
 }
