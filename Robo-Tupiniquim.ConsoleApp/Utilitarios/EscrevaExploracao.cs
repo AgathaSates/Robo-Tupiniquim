@@ -1,15 +1,11 @@
-﻿using Robo_Tupiniquim.ConsoleApp.Entidades;
+﻿using System;
+using Robo_Tupiniquim.ConsoleApp.Entidades;
 
 namespace Robo_Tupiniquim.ConsoleApp.Utilitários;
 
 class EscrevaExploracao
 {
-    static Random random = new Random();
-    public static int duracao = random.Next(10, 60);
-    public static int amostras = random.Next(1, 15);
-    public static string[] Clima = { "Tempestade de Poeira", "Tempestade de Areia", "Auroras", "Ventos Fortes", "Nebuloso", "Chuva de Metano", "Frio Inteso" };
-    public static string climaAtual = Clima[random.Next(Clima.Length)];
-    public static int progresso = random.Next(1, 101);
+
 
     public static void TituloIniciodaMissao()
     {
@@ -44,8 +40,8 @@ class EscrevaExploracao
         Colorir.EscreverEmAmareloEscuroLinha("-> Digite o nome do 1° robô: ");
     }
 
-    public static void PedirPosicaoRobo1(string nomeRobo1) 
-    {       
+    public static void PedirPosicaoRobo1(string nomeRobo1)
+    {
         Console.WriteLine();
         Colorir.EscreverEmAmareloEscuroLinha($"-> Digite a posição inicial do Robô {nomeRobo1} (x y direção(N,S,L,O)): ");
     }
@@ -62,7 +58,7 @@ class EscrevaExploracao
     }
 
     public static void PedirPosicaoRobo2(string nomeRobo2)
-    {    
+    {
         Console.WriteLine();
         Colorir.EscreverEmAmareloEscuroLinha($"-> Digite a posição inicial do Robô {nomeRobo2} (x y direção(N,S,L,O)): ");
     }
@@ -97,10 +93,17 @@ class EscrevaExploracao
         Colorir.EscreverEmVerde($"> A posição final do Robô {nomerobo} é: {x} {y} {direcao}");
         Colorir.EscreverEmVerde("---------------------------------------------------------------");
         HistoricodeExploracao.AdicionarnoHistorico($" A posição final do Robo {nomerobo} foi: {x} {y} {direcao}");
-    } 
+    }
 
     public static void StatusFinaldaMissao()
     {
+        Random random = new Random();
+        int duracao = random.Next(10, 60);
+        int amostras = random.Next(1, 15);
+        string[] Clima = { "Tempestade de Poeira", "Tempestade de Areia", "Auroras", "Ventos Fortes", "Nebuloso", "Chuva de Metano", "Frio Inteso" };
+        string climaAtual = Clima[random.Next(Clima.Length)];
+        int progresso = random.Next(1, 101);
+
         Colorir.EscreverEmAzul("          ------------------------------------------");
         Colorir.EscreverEmAzul("                   Status Final da missão");
         Colorir.EscreverEmAzul("          ------------------------------------------");
