@@ -1,5 +1,4 @@
-﻿using System.ComponentModel;
-using System.Globalization;
+﻿using System.Globalization;
 using System.Text.RegularExpressions;
 
 namespace Robo_Tupiniquim.ConsoleApp.Utilitários;
@@ -12,7 +11,7 @@ class Validadores
         string opcao = Console.ReadLine()!;
         while (!int.TryParse(opcao, out  opcaovalida) || opcaovalida < min || opcaovalida > max)
         {
-            Console.Write(" -> (X) Opção inválida! Digite novamente: ");
+            Colorir.EscreverEmVermelhoLinha(" -> (X) Opção inválida! Digite novamente: ");
             opcao = Console.ReadLine()!;
         }
         return opcaovalida;
@@ -22,9 +21,9 @@ class Validadores
     {
         
         string opcao = Console.ReadLine()!;
-        while (string.IsNullOrWhiteSpace(opcao) || !Regex.IsMatch(opcao, @"^\d+\s\d+$")) // valida apenas numeros separados por espaço
+        while (string.IsNullOrWhiteSpace(opcao) || !Regex.IsMatch(opcao, @"^\d+\s\d+$")) // valida apenas numeros separados por 1 espaço
         {
-            Console.Write(" -> (X) Informação não reconhecida, digite novamente conforme orientado: ");
+            Colorir.EscreverEmVermelhoLinha(" -> (X) Informação não reconhecida, digite novamente conforme orientado: ");
             opcao = Console.ReadLine()!;
         }
         return opcao;
@@ -35,7 +34,7 @@ class Validadores
         string name = Console.ReadLine()!;
         while (string.IsNullOrWhiteSpace(name) || name.Length < 3 || name.Length > 30)
         {
-            Console.Write(" -> (X) Nome inválido! Digite novamente: ");
+            Colorir.EscreverEmVermelhoLinha(" -> (X) Nome inválido! Digite novamente: ");
             name = Console.ReadLine()!;
         }
         name = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(name);
@@ -47,7 +46,7 @@ class Validadores
         string comando = Console.ReadLine()!;
         while (string.IsNullOrWhiteSpace(comando) || !Regex.IsMatch(comando, @"^[MmDdEe]+$")) // valida apenas M, D ou E
         {
-            Console.Write(" -> (X) Comando inválido! Digite novamente conforme orientado: ");
+            Colorir.EscreverEmVermelhoLinha(" -> (X) Comando inválido! Digite novamente conforme orientado: ");
             comando = Console.ReadLine()!;
         }
         return comando.ToUpper();
@@ -58,10 +57,9 @@ class Validadores
         string posicao = Console.ReadLine()!;
         while (string.IsNullOrWhiteSpace(posicao) || !Regex.IsMatch(posicao, @"^\d+\s\d+\s[NnSsLlOo]$")) // valida numeros separados por espaço e uma letra N, S, L ou O
         {
-            Console.Write(" -> (X) Posição inválida! Digite novamente conforme orientado: ");
+            Colorir.EscreverEmVermelhoLinha(" -> (X) Posição inválida! Digite novamente conforme orientado: ");
             posicao = Console.ReadLine()!;
         }
         return posicao.ToUpper();
     }
-
 }

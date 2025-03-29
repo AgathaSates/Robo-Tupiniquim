@@ -22,7 +22,6 @@ internal class Program
                 case 3: HistoricodeExploracao.MostrarHistorico(); break;
 
                 case 4: EscrevaMenu.Desconectar(); return;
-
             }
         }       
     }

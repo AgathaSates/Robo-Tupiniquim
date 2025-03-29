@@ -21,7 +21,7 @@ class MovimentosRobo
 
         if (x < 0 || x > Area.LimiteX || y < 0 || y > Area.LimiteY)
         {
-            EscrevaExploracao.UltrapassouArea(nomerobo);
+            EscrevaExploracao.UltrapassouArea(nomerobo, x ,y , direcao);
         }
         else 
         {

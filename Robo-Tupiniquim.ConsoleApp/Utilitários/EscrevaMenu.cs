@@ -6,66 +6,65 @@ class EscrevaMenu
     {
         Console.Clear();
         Console.WriteLine("\x1b[3J");
-        Console.WriteLine("---------------------------------------------------------");
-        Console.WriteLine("                Desbravamento de Marte");
-        Console.WriteLine("---------------------------------------------------------");
+        Colorir.EscreverEmVermelho("---------------------------------------------------------");
+        Colorir.EscreverEmVermelho("                    Desbrave Marte");
+        Colorir.EscreverEmVermelho("   Com os Robôs Tupiniquim da Academia do Programador!");
+        Colorir.EscreverEmVermelho("---------------------------------------------------------");
     }
 
     public static void Menu()
     {
-
         EscreverLento("Bem-vindo à missão da AEB! Explore o Planeta Vermelho e \ndesbrave o desconhecido, tudo sem sair da Terra!");
         Thread.Sleep(800);
         Console.WriteLine(); 
-        Console.WriteLine("---------------------------------------------------------");
-        Console.WriteLine("1 - Iniciar Nova Missão de Exploração");
-        Console.WriteLine("2 - Treinamento");      
-        Console.WriteLine("3 - Missões Concluídas");      
-        Console.WriteLine("4 - Desconectar");
-        Console.WriteLine("---------------------------------------------------------");
-        Console.WriteLine("Dica: Use o Treinamento para aprender a controlar o robô!");
-        Console.WriteLine("---------------------------------------------------------");
-        Console.Write("Escolha uma ação para continuar sua jornada: ");
+        Colorir.EscreverEmAmarelo("---------------------------------------------------------");
+        Colorir.EscreverEmAmarelo("1 - Iniciar Nova Missão de Exploração");
+        Colorir.EscreverEmAmarelo("2 - Treinamento");      
+        Colorir.EscreverEmAmarelo("3 - Missões Concluídas");      
+        Colorir.EscreverEmAmarelo("4 - Desconectar");
+        Colorir.EscreverEmAmarelo("---------------------------------------------------------");
+        Colorir.EscreverEmRosa("Dica: Use o Treinamento para aprender a controlar o robô!");
+        Colorir.EscreverEmAmarelo("---------------------------------------------------------");
+        Colorir.EscreverEmAmareloEscuroLinha("> Escolha uma ação para continuar sua jornada: ");
     }
 
     public static void Treinamento()
     {
         Console.Clear();
         Console.WriteLine("\x1b[3J");
-        Console.WriteLine("--------------------------------------------------------------------------");
-        Console.WriteLine("                        Treinamento de Controle");
-        Console.WriteLine("--------------------------------------------------------------------------");
-        Console.WriteLine("                               Instruções");
-        Console.WriteLine("OBS: O processo é realizado com dois robôs, e você precisará definir as \n posições iniciais e comandos para ambos.");
-        Console.WriteLine(  );
-        Console.WriteLine("1. Antes de começar, informe o tamanho da área que será explorada.");
-        Console.WriteLine( );
-        Console.WriteLine("  - O tamanho é informado com dois números: largura (X) e altura (Y).\n    Exemplo: '5 5'");
-        Console.WriteLine(  );
-        Console.WriteLine("  - Os robôs só poderão se mover dentro dessa área!");
-        Console.WriteLine(  );
-        Console.WriteLine("2.Após definir a área, informe a posição inicial do robô.");
-        Console.WriteLine( );
-        Console.WriteLine("  - A posição é informada com 3 dados:\n    X (posição horizontal), Y (posição vertical) e a direção do robô.");
-        Console.WriteLine(  );
-        Console.WriteLine("  - Exemplo de posição inicial: '1 2 N' significa que  o robô começa\n    na posição (1, 2) e está virado para o Norte.");
+        Colorir.EscreverEmAzul("--------------------------------------------------------------------------");
+        Colorir.EscreverEmAzul("                        Treinamento de Controle");
+        Colorir.EscreverEmAzul("--------------------------------------------------------------------------");
+        Colorir.EscreverEmVerde("                               Instruções");
         Console.WriteLine();
-        Console.WriteLine("  - Direções possíveis: N (Norte), S (Sul), L (Leste) e O (Oeste).");
-        Console.WriteLine("--------------------------------------------------------------------------");
-        Console.WriteLine("                                Comandos");
-        Console.WriteLine(   );
-        Console.WriteLine("> [M] - Mover para frente");
-        Console.WriteLine("> [E] - Virar à esquerda");
-        Console.WriteLine("> [D] - Virar à direita");
-        Console.WriteLine( );
-        Console.WriteLine("- Os comandos devem ser digitados em sequência, sem espaços.");
-        Console.WriteLine("  Exemplo: 'EMEMEMEMM' para executar uma série de movimentos.");
+        Colorir.EscreverEmAmareloEscuro("OBS: O processo é realizado com dois robôs, e você precisará definir as \n posições iniciais e comandos para ambos.");
         Console.WriteLine(  );
-        Console.WriteLine("- O robô seguirá a sequência de comandos e se moverá dentro dos\n  limites da área informada.");
-        Console.WriteLine("--------------------------------------------------------------------------");
-        Console.WriteLine("> Use 'M' para mover o robô e 'E'/'D' para girar à esquerda ou à direita.");
-        Console.WriteLine("--------------------------------------------------------------------------");
-        Console.Write("-> Pressione qualquer tecla para voltar ao menu:");
+        Colorir.EscreverEmCiano("1. Antes de começar, informe o tamanho da área que será explorada.");
+        Console.WriteLine();
+        Colorir.EscreverEmAmareloEscuro("  - O tamanho é informado com dois números: largura (X) e altura (Y).\n    Exemplo: '5 5'");
+        Console.WriteLine(  );
+        Colorir.EscreverEmAmareloEscuro("  - Os robôs só poderão se mover dentro dessa área!");
+        Console.WriteLine(  );
+        Colorir.EscreverEmCiano("2.Após definir a área, informe a posição inicial do robô.");
+        Console.WriteLine( );
+        Colorir.EscreverEmAmareloEscuro("  - A posição é informada com 3 dados:\n    X (posição horizontal), Y (posição vertical) e a direção do robô.");
+        Console.WriteLine(  );
+        Colorir.EscreverEmAmareloEscuro("  - Exemplo de posição inicial: '1 2 N' significa que  o robô começa\n    na posição (1, 2) e está virado para o Norte.");
+        Console.WriteLine();
+        Colorir.EscreverEmAmareloEscuro("  - Direções possíveis: N (Norte), S (Sul), L (Leste) e O (Oeste).");
+        Colorir.EscreverEmCiano("--------------------------------------------------------------------------");
+        Colorir.EscreverEmVerde("                                Comandos");
+        Console.WriteLine(   );
+        Colorir.EscreverEmCiano("> [M] - Mover para frente");
+        Colorir.EscreverEmCiano("> [E] - Virar à esquerda");
+        Colorir.EscreverEmCiano("> [D] - Virar à direita");
+        Console.WriteLine( );
+        Colorir.EscreverEmAmareloEscuro("- Os comandos devem ser digitados em sequência, sem espaços.");
+        Colorir.EscreverEmAmareloEscuro("  Exemplo: 'EMEMEMEMM' para executar uma série de movimentos.");
+        Console.WriteLine(  );
+        Colorir.EscreverEmAmareloEscuro("- O robô seguirá a sequência de comandos e se moverá dentro dos\n  limites da área informada.");
+        Colorir.EscreverEmAzul("--------------------------------------------------------------------------");
+        Colorir.EscreverEmVerde("-> Pressione qualquer tecla para voltar ao menu");
         Console.ReadKey();
     }
 
@@ -73,23 +72,22 @@ class EscrevaMenu
     {
         Console.Clear();
         Console.WriteLine("\x1b[3J");
-        Console.WriteLine("----------------------------------------------------------------");
-        Console.WriteLine("                       Desconectando...");
-        Console.WriteLine("----------------------------------------------------------------");
+        Colorir.EscreverEmVermelhoEscuro("----------------------------------------------------------------");
+        Colorir.EscreverEmVermelhoEscuro("                       Desconectando...");
+        Colorir.EscreverEmVermelhoEscuro("----------------------------------------------------------------");
         Thread.Sleep(1000);
-        Console.WriteLine(" Encerrando a conexão com a AEB...");
+        Colorir.EscreverEmAmareloEscuro(">> Encerrando a conexão com a AEB...");
         Thread.Sleep(1500);
-        Console.WriteLine(" A missão foi finalizada com sucesso. Os robôs retornaram à base.");
-        Console.WriteLine(" Até a próxima missão, explorador! \n Que as estrelas guiem seu caminho! o/");
-        Console.WriteLine("----------------------------------------------------------------");
-
+        Colorir.EscreverEmVerde(" A missão foi finalizada com sucesso. Os robôs retornaram à base.");
+        Colorir.EscreverEmVerde(" Até a próxima missão, explorador! \n Que as estrelas guiem seu caminho! o/");
+        Colorir.EscreverEmVerde("----------------------------------------------------------------");
     }
    
     public static void EscreverLento(string mensagem)
     {
         foreach (char c in mensagem)
         {
-            Console.Write(c);
+            Colorir.EscreverEmVerdeLento(c);
             Thread.Sleep(20);
         }
     }

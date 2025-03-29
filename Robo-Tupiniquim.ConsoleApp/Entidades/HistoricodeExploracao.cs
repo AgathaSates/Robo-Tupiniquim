@@ -1,4 +1,5 @@
-﻿namespace Robo_Tupiniquim.ConsoleApp.Entidades;
+﻿using Robo_Tupiniquim.ConsoleApp.Utilitários;
+namespace Robo_Tupiniquim.ConsoleApp.Entidades;
 
 class HistoricodeExploracao
 {
@@ -9,42 +10,38 @@ class HistoricodeExploracao
     {
         Console.Clear();
         Console.WriteLine("\x1b[3J");
-        Console.WriteLine("-------------------------------------------------------------------");
-        Console.WriteLine("                     Histórico de Missões");
-        Console.WriteLine("-------------------------------------------------------------------");
+        Colorir.EscreverEmAzul("-------------------------------------------------------------------");
+        Colorir.EscreverEmAzul("                     Histórico de Missões");
+        Colorir.EscreverEmAzul("-------------------------------------------------------------------");
 
         if (historicoExploracao[0] == null)
         {
-            Console.WriteLine("-------------------------------------------------------------------");
-            Console.WriteLine("                (X) Não há missões registradas.");
-            Console.WriteLine("-------------------------------------------------------------------");
+            Colorir.EscreverEmVermelho("-------------------------------------------------------------------");
+            Colorir.EscreverEmVermelho("                (X) Não há missões registradas.");
+            Colorir.EscreverEmVermelho("-------------------------------------------------------------------");
         }
 
         else
         {
-            Console.WriteLine("-------------------------------------------------------------------");
+            Colorir.EscreverEmAzul("-------------------------------------------------------------------");
             for (int i = 0; i < missoes; i++)
             {
 
-                Console.Write($"{i + 1}° -");
-                Console.WriteLine(historicoExploracao[i]);            
+                Colorir.EscreverEmAmareloEscuroLinha($"{i + 1}° -");
+                Colorir.EscreverEmVerde(historicoExploracao[i]);            
             }
-            Console.WriteLine("-------------------------------------------------------------------");
+            Colorir.EscreverEmAzul("-------------------------------------------------------------------");
         }
-        Console.Write("-> Pressione qualquer tecla para voltar ao menu:");
+        Colorir.EscreverEmAmareloEscuroLinha("-> Pressione qualquer tecla para voltar ao menu:");
         Console.ReadKey();
     }
 
     public static void AdicionarnoHistorico(string mensagem)
     {
         if (missoes < historicoExploracao.Length)
-        {
             historicoExploracao[missoes++] = mensagem;
-        }
+    
         else
-        {
-            Console.WriteLine("Histórico cheio.");
-        }
+            Colorir.EscreverEmVermelho("Histórico cheio.");
     }
-
 }

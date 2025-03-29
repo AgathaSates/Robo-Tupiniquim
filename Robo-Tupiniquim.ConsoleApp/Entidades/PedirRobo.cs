@@ -28,7 +28,7 @@ class PedirRobo
 
         EscrevaExploracao.PosicaoInicialRobo(nomeRobo1,robo1x, robo1y, robo1direcao);
 
-        Console.Write("-> Digite os comandos (E=esquerda, D=direita, M=mover) de forma sequencial: ");
+        Colorir.EscreverEmAmareloEscuroLinha("-> Digite os comandos (E=esquerda, D=direita, M=mover) de forma sequencial: ");
         robo1comandos = Validadores.EhumComandoValido();
     }
 
@@ -44,10 +44,7 @@ class PedirRobo
 
         EscrevaExploracao.PosicaoInicialRobo(nomeRobo2, robo2x, robo2y, robo2direcao);
 
-        Console.Write("-> Digite os comandos (E=esquerda, D=direita, M=mover) de forma sequencial: ");
+        Colorir.EscreverEmAmareloEscuroLinha("-> Digite os comandos (E=esquerda, D=direita, M=mover) de forma sequencial: ");
         robo2comandos = Validadores.EhumComandoValido();
-
-    }
-
-    
+    }  
 }
