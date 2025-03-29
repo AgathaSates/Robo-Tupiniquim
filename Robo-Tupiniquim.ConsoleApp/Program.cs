@@ -12,7 +12,7 @@ internal class Program
             Console.Title = "Desbrave Marte";
             EscrevaMenu.Titulo();
             EscrevaMenu.Menu();
-            int opcaomenu = Convert.ToInt32(Console.ReadLine());
+            int opcaomenu = Validadores.EhUmaOpcaodoMenu(1, 4);
             switch (opcaomenu)
             {
                 case 1: IniciarExploracao.Explorar(); break;

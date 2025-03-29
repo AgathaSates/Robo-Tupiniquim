@@ -1,4 +1,6 @@
-﻿namespace Robo_Tupiniquim.ConsoleApp.Entidades;
+﻿using Robo_Tupiniquim.ConsoleApp.Utilitários;
+
+namespace Robo_Tupiniquim.ConsoleApp.Entidades;
 
 class Area
 {
@@ -9,7 +11,7 @@ class Area
         Console.WriteLine("          Estabeleça o tamanho da area que irá explorar");
         Console.WriteLine("-------------------------------------------------------------------");
         Console.Write("-> Digite o tamanho da área (largura X altura, ex: 5 5): ");
-        string[] limites = Console.ReadLine().Split(' ');
+        string[] limites = Validadores.EhUmaAreaValdia().Split(' ');
         LimiteX = int.Parse(limites[0]);
         LimiteY = int.Parse(limites[1]);
 

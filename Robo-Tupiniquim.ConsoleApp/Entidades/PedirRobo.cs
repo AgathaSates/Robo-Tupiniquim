@@ -18,35 +18,34 @@ class PedirRobo
     public static void PedirDadosRobo1()
     {
         EscrevaExploracao.PedirNomeRobo1();
-        nomeRobo1 = Console.ReadLine();
+        nomeRobo1 = Validadores.EhumNomeValido();
 
         EscrevaExploracao.PedirPosicaoRobo1(nomeRobo1);
-        string[] posicaoInicial = Console.ReadLine().Split(' ');
+        string[] posicaoInicial = Validadores.EhumaPosicaoValida().Split(' ');
         robo1x = int.Parse(posicaoInicial[0]);
         robo1y = int.Parse(posicaoInicial[1]);
-        robo1direcao = char.Parse(posicaoInicial[2].ToUpper());
+        robo1direcao = char.Parse(posicaoInicial[2]);
 
         EscrevaExploracao.PosicaoInicialRobo(nomeRobo1,robo1x, robo1y, robo1direcao);
 
         Console.Write("-> Digite os comandos (E=esquerda, D=direita, M=mover) de forma sequencial: ");
-        robo1comandos = Console.ReadLine().ToUpper();
+        robo1comandos = Validadores.EhumComandoValido();
     }
 
     public static void PedirDadosRobo2()
     {
         EscrevaExploracao.PedirNomeRobo2();
-        nomeRobo2 = Console.ReadLine();
-
+        nomeRobo2 = Validadores.EhumNomeValido();
         EscrevaExploracao.PedirPosicaoRobo2(nomeRobo2);
-        string[] posicaoInicial = Console.ReadLine().Split(' ');
+        string[] posicaoInicial = Validadores.EhumaPosicaoValida().Split(' ');
         robo2x = int.Parse(posicaoInicial[0]);
         robo2y = int.Parse(posicaoInicial[1]);
-        robo2direcao = char.Parse(posicaoInicial[2].ToUpper());
+        robo2direcao = char.Parse(posicaoInicial[2]);
 
         EscrevaExploracao.PosicaoInicialRobo(nomeRobo2, robo2x, robo2y, robo2direcao);
 
         Console.Write("-> Digite os comandos (E=esquerda, D=direita, M=mover) de forma sequencial: ");
-        robo2comandos = Console.ReadLine().ToUpper();
+        robo2comandos = Validadores.EhumComandoValido();
 
     }
 
