@@ -15,6 +15,7 @@ class Colorir
         Console.WriteLine(mensagem);
         Console.ResetColor();
     }
+
     public static string EscreverEmVermelhohistorico(string mensagem)
     {
         Console.ForegroundColor = ConsoleColor.DarkRed;
@@ -22,6 +23,7 @@ class Colorir
         Console.ResetColor();
         return mensagem;
     } 
+
     public static void EscreverEmVermelho(string mensagem)
     {
         Console.ForegroundColor = ConsoleColor.Red;
@@ -82,8 +84,5 @@ class Colorir
         Console.ForegroundColor = ConsoleColor.Magenta;
         Console.WriteLine(mensagem);
         Console.ResetColor();
-    }
-    
-    
-    
+    } 
 }

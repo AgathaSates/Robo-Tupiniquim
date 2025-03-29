@@ -26,7 +26,6 @@ class HistoricodeExploracao
             Colorir.EscreverEmAzul("-------------------------------------------------------------------");
             for (int i = 0; i < missoes; i++)
             {
-
                 Colorir.EscreverEmAmareloEscuroLinha($"{i + 1}° -");
                 Colorir.EscreverEmVerde(historicoExploracao[i]);            
             }

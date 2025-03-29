@@ -15,18 +15,14 @@ class MovimentosRobo
                 case 'E': direcao = VirarParaEsquerda(direcao); break;
 
                 case 'D': direcao = VirarParaDireita(direcao); break;
-
             }
         }
 
         if (x < 0 || x > Area.LimiteX || y < 0 || y > Area.LimiteY)
-        {
             EscrevaExploracao.UltrapassouArea(nomerobo, x ,y , direcao);
-        }
-        else 
-        {
+        
+        else   
             EscrevaExploracao.PosicaoFinalRobo(nomerobo, x, y, direcao);
-        }
     }
 
     public static void Avançar(char direcao, ref int x, ref int y)
@@ -40,9 +36,7 @@ class MovimentosRobo
             case 'L': x++; break;
 
             case 'O': x--; break;
-
         }
-
     }
 
     public static char VirarParaEsquerda(char direcao)
