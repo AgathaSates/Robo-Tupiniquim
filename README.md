@@ -1,14 +1,14 @@
-# Robô Tupiniquim - Desbrave Marte
+# RobÃ´ Tupiniquim - Desbrave Marte
 
 ![Status Finalizado](https://img.shields.io/badge/Status-Finalizado-green?color=Green)
 
- ### Demonstração
+ ### DemonstraÃ§Ã£o
 
->![Demonstração do Projeto, gif imgur](https://i.imgur.com/cB2VLyW.gif)
+>![DemonstraÃ§Ã£o do Projeto, gif imgur](https://i.imgur.com/cB2VLyW.gif)
 
-## Índice
+## Ãndice
 
-- [Introdução](#introdução)
+- [IntroduÃ§Ã£o](#introduÃ§Ã£o)
 - [Tecnologias usadas](#tecnologias-usadas)
 - [Funcionalidades](#funcionalidades)
 - [Estrutura do Projeto](#estrutura-do-projeto)
@@ -16,10 +16,10 @@
 - [Sobre o Projeto](#sobre-o-projeto)
 - [Autor](#autor)
 
-## Introdução
+## IntroduÃ§Ã£o
 
-Robo Tupiniquim é uma aplicação de console que simula a exploração de 2 robôs em Marte.
-A aplicação permite que os usuários controlem os movimentos do robô, veja sua posição final e acompanhe o histórico de exploração.
+Robo Tupiniquim Ã© uma aplicaÃ§Ã£o de console que simula a exploraÃ§Ã£o de 2 robÃ´s em Marte.
+A aplicaÃ§Ã£o permite que os usuÃ¡rios controlem os movimentos do robÃ´, veja sua posiÃ§Ã£o final e acompanhe o histÃ³rico de exploraÃ§Ã£o.
 
 ## Tecnologias usadas
 
@@ -27,51 +27,51 @@ A aplicação permite que os usuários controlem os movimentos do robô, veja sua po
 
 ## Funcionalidades
 
-- **Inicializar Robôs**: Nomeie e defina as posições iniciais e direções dos robôs.
-- **Movimentação do Robô**: Controle os movimentos do robô usando comandos para avançar, virar à esquerda ou virar à direita.
-- **Área de Exploração**: Defina a área de exploração com dimensões personalizáveis.
-- **Histórico de Missões**: Acompanhe e exiba o histórico de missões dos robôs de forma detalhada.
-- **Validação de entradas:** Apenas os valores solicitados são aceitos, caso contrário, o usuário será instruído a inserir um valor válido.
+- **Inicializar RobÃ´s**: Nomeie e defina as posiÃ§Ãµes iniciais e direÃ§Ãµes dos robÃ´s.
+- **MovimentaÃ§Ã£o do RobÃ´**: Controle os movimentos do robÃ´ usando comandos para avanÃ§ar, virar Ã  esquerda ou virar Ã  direita.
+- **Ãrea de ExploraÃ§Ã£o**: Defina a Ã¡rea de exploraÃ§Ã£o com dimensÃµes personalizÃ¡veis.
+- **HistÃ³rico de MissÃµes**: Acompanhe e exiba o histÃ³rico de missÃµes dos robÃ´s de forma detalhada.
+- **ValidaÃ§Ã£o de entradas:** Apenas os valores solicitados sÃ£o aceitos, caso contrÃ¡rio, o usuÃ¡rio serÃ¡ instruÃ­do a inserir um valor vÃ¡lido.
 
 ### Comandos Exemplos
 
-- `M`: Avançar
-- `E`: Virar à esquerda
-- `D`: Virar à direita
+- `M`: AvanÃ§ar
+- `E`: Virar Ã  esquerda
+- `D`: Virar Ã  direita
 
 ## Estrutura do Projeto
 
-- `Entidades` – Representações de objetos como robô, terreno, etc.
+- `Entidades` â€“ RepresentaÃ§Ãµes de objetos como robÃ´, terreno, etc.
 
-- `Utilitários` – Métodos auxiliares como validações e escrita no console.
+- `UtilitÃ¡rios` â€“ MÃ©todos auxiliares como validaÃ§Ãµes e escrita no console.
 
-- `Program.cs` – Ponto de entrada principal da aplicação.
+- `Program.cs` â€“ Ponto de entrada principal da aplicaÃ§Ã£o.
 
 
 ## Como Usar
 
 ### Requisitos
 
-- .NET SDK (recomendado .NET 8.0 ou superior) para compilação e execução do projeto.
+- .NET SDK (recomendado .NET 8.0 ou superior) para compilaÃ§Ã£o e execuÃ§Ã£o do projeto.
 
-### 1. Clone o repositório.
+### 1. Clone o repositÃ³rio.
  
 ```
 git clone https://github.com/AgathaSates/Robo-Tupiniquim.git
 ```
-### 2. Abra o terminal ou o prompt de comando e navegue até a pasta raiz
+### 2. Abra o terminal ou o prompt de comando e navegue atÃ© a pasta raiz
 
 ```
 cd Robo-Tupiniquim
 ```
 
-### 3. Utilize o comando abaixo para restaurar as dependências do projeto.
+### 3. Utilize o comando abaixo para restaurar as dependÃªncias do projeto.
 
 ```
 dotnet restore
 ```
 
-### 4. Navegue até a pasta do projeto
+### 4. Navegue atÃ© a pasta do projeto
 
 ```
 cd Robo-Tupiniquim.ConsoleApp
@@ -88,4 +88,4 @@ Desenvolvido durante o curso Fullstack da [Academia do Programador](https://acad
 
 ## Autor
 
-- [Agatha Sates](https://github.com/AgathaSates) – Estudante de Desenvolvimento de Software na [Academia do Programador](https://academiadoprogramador.net)
+- [Agatha Sates](https://github.com/AgathaSates) â€“ Estudante de Desenvolvimento fullstack na [Academia do Programador](https://academiadoprogramador.net)
