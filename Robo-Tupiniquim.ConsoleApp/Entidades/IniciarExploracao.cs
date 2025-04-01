@@ -6,15 +6,23 @@ class IniciarExploracao
 {
     public static void Explorar()
     {
+        Robo robo1 = new Robo();
+        Robo robo2 = new Robo();
+
         EscrevaExploracao.TituloIniciodaMissao();
         Area.PedirArea();
-        PedirRobo.PedirDadosRobo1();
-        PedirRobo.PedirDadosRobo2();
+
+        robo1.PedirDados();
+        robo2.PedirDados();
+        
         EscrevaExploracao.MensagemInicioDaMissao();
-        MovimentosRobo.MoverRobo(PedirRobo.nomeRobo1,PedirRobo.robo1comandos,PedirRobo.robo1direcao,PedirRobo.robo1x, PedirRobo.robo1y);
+
+        robo1.MoverRobo();
         Thread.Sleep(1500);
-        MovimentosRobo.MoverRobo(PedirRobo.nomeRobo2,PedirRobo.robo2comandos,PedirRobo.robo2direcao,PedirRobo.robo2x, PedirRobo.robo2y);
+
+        robo2.MoverRobo();
         Thread.Sleep(1500);
+
         EscrevaExploracao.StatusFinaldaMissao();
         Console.ReadKey();
     }
